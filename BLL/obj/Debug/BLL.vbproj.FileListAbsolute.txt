@@ -1,0 +1,12 @@
+C:\Users\Cristian\Desktop\generala\Generala\BLL\bin\Debug\BLL.dll
+C:\Users\Cristian\Desktop\generala\Generala\BLL\bin\Debug\BLL.pdb
+C:\Users\Cristian\Desktop\generala\Generala\BLL\bin\Debug\BLL.xml
+C:\Users\Cristian\Desktop\generala\Generala\BLL\bin\Debug\BE.dll
+C:\Users\Cristian\Desktop\generala\Generala\BLL\bin\Debug\BE.pdb
+C:\Users\Cristian\Desktop\generala\Generala\BLL\bin\Debug\BE.xml
+C:\Users\Cristian\Desktop\generala\Generala\BLL\obj\Debug\BLL.vbprojResolveAssemblyReference.cache
+C:\Users\Cristian\Desktop\generala\Generala\BLL\obj\Debug\BLL.Resources.resources
+C:\Users\Cristian\Desktop\generala\Generala\BLL\obj\Debug\BLL.vbproj.GenerateResource.Cache
+C:\Users\Cristian\Desktop\generala\Generala\BLL\obj\Debug\BLL.dll
+C:\Users\Cristian\Desktop\generala\Generala\BLL\obj\Debug\BLL.xml
+C:\Users\Cristian\Desktop\generala\Generala\BLL\obj\Debug\BLL.pdb

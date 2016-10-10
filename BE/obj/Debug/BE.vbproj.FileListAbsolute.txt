@@ -1,0 +1,9 @@
+C:\Users\Cristian\Desktop\generala\Generala\BE\bin\Debug\BE.dll
+C:\Users\Cristian\Desktop\generala\Generala\BE\bin\Debug\BE.pdb
+C:\Users\Cristian\Desktop\generala\Generala\BE\bin\Debug\BE.xml
+C:\Users\Cristian\Desktop\generala\Generala\BE\obj\Debug\BE.vbprojResolveAssemblyReference.cache
+C:\Users\Cristian\Desktop\generala\Generala\BE\obj\Debug\BE.Resources.resources
+C:\Users\Cristian\Desktop\generala\Generala\BE\obj\Debug\BE.vbproj.GenerateResource.Cache
+C:\Users\Cristian\Desktop\generala\Generala\BE\obj\Debug\BE.dll
+C:\Users\Cristian\Desktop\generala\Generala\BE\obj\Debug\BE.xml
+C:\Users\Cristian\Desktop\generala\Generala\BE\obj\Debug\BE.pdb

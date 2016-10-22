@@ -1,4 +1,4 @@
-﻿Public Class JUGADOR
+﻿Public Class Jugador
     Private _user As String
     Public Property user() As String
         Get

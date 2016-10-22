@@ -22,89 +22,117 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.BDado3 = New System.Windows.Forms.Button()
+        Me.BDado0 = New System.Windows.Forms.Button()
+        Me.BDado1 = New System.Windows.Forms.Button()
+        Me.BDado2 = New System.Windows.Forms.Button()
+        Me.BDado4 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'BDado3
         '
-        Me.Button1.Location = New System.Drawing.Point(438, 115)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(96, 84)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BDado3.Location = New System.Drawing.Point(809, 245)
+        Me.BDado3.Name = "BDado3"
+        Me.BDado3.Size = New System.Drawing.Size(96, 84)
+        Me.BDado3.TabIndex = 0
+        Me.BDado3.Text = "1"
+        Me.BDado3.UseVisualStyleBackColor = True
         '
-        'Button2
+        'BDado0
         '
-        Me.Button2.Location = New System.Drawing.Point(132, 115)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(96, 84)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "1"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BDado0.Location = New System.Drawing.Point(503, 245)
+        Me.BDado0.Name = "BDado0"
+        Me.BDado0.Size = New System.Drawing.Size(96, 84)
+        Me.BDado0.TabIndex = 1
+        Me.BDado0.Text = "1"
+        Me.BDado0.UseVisualStyleBackColor = True
         '
-        'Button3
+        'BDado1
         '
-        Me.Button3.Location = New System.Drawing.Point(234, 115)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(96, 84)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "2"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.BDado1.Location = New System.Drawing.Point(605, 245)
+        Me.BDado1.Name = "BDado1"
+        Me.BDado1.Size = New System.Drawing.Size(96, 84)
+        Me.BDado1.TabIndex = 2
+        Me.BDado1.Text = "2"
+        Me.BDado1.UseVisualStyleBackColor = True
         '
-        'Button4
+        'BDado2
         '
-        Me.Button4.Location = New System.Drawing.Point(336, 115)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(96, 84)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "3"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.BDado2.Location = New System.Drawing.Point(707, 245)
+        Me.BDado2.Name = "BDado2"
+        Me.BDado2.Size = New System.Drawing.Size(96, 84)
+        Me.BDado2.TabIndex = 3
+        Me.BDado2.Text = "3"
+        Me.BDado2.UseVisualStyleBackColor = True
         '
-        'Button5
+        'BDado4
         '
-        Me.Button5.Location = New System.Drawing.Point(30, 115)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(96, 84)
-        Me.Button5.TabIndex = 4
-        Me.Button5.Text = "4"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.BDado4.Location = New System.Drawing.Point(911, 245)
+        Me.BDado4.Name = "BDado4"
+        Me.BDado4.Size = New System.Drawing.Size(96, 84)
+        Me.BDado4.TabIndex = 4
+        Me.BDado4.Text = "4"
+        Me.BDado4.UseVisualStyleBackColor = True
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(906, 12)
+        Me.Button6.Location = New System.Drawing.Point(658, 12)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(210, 84)
         Me.Button6.TabIndex = 5
         Me.Button6.Text = "Tirar"
         Me.Button6.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 93)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 33
+        Me.DataGridView1.Size = New System.Drawing.Size(361, 608)
+        Me.DataGridView1.TabIndex = 6
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(1215, 93)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.RowTemplate.Height = 33
+        Me.DataGridView2.Size = New System.Drawing.Size(361, 608)
+        Me.DataGridView2.TabIndex = 7
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1128, 735)
+        Me.ClientSize = New System.Drawing.Size(1595, 735)
+        Me.Controls.Add(Me.DataGridView2)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BDado4)
+        Me.Controls.Add(Me.BDado2)
+        Me.Controls.Add(Me.BDado1)
+        Me.Controls.Add(Me.BDado0)
+        Me.Controls.Add(Me.BDado3)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents BDado3 As Button
+    Friend WithEvents BDado0 As Button
+    Friend WithEvents BDado1 As Button
+    Friend WithEvents BDado2 As Button
+    Friend WithEvents BDado4 As Button
     Friend WithEvents Button6 As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DataGridView2 As DataGridView
 End Class

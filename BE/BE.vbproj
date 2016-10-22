@@ -63,9 +63,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CUBILETE.vb" />
-    <Compile Include="DADO.vb" />
-    <Compile Include="JUGADOR.vb" />
+    <Compile Include="Cubilete.vb" />
+    <Compile Include="Dado.vb" />
+    <Compile Include="Jugador.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -81,8 +81,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PARTIDA.vb" />
-    <Compile Include="PUNTAJE.vb" />
+    <Compile Include="Partida.vb" />
+    <Compile Include="Puntaje.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

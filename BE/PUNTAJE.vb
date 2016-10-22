@@ -1,4 +1,4 @@
-﻿Public Class PUNTAJE
+﻿Public Class Puntaje
     Private _1 As Integer
     Public Property c1() As Integer
         Get

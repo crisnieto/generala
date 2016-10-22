@@ -1,99 +1,49 @@
-﻿Public Class PARTIDA
+﻿Public Class Partida
 
     Public Sub New()
-        dados.Add(dado1)
-        dados.Add(dado2)
-        dados.Add(dado3)
-        dados.Add(dado4)
-        dados.Add(dado5)
+        dados.Add(New Dado)
+        dados.Add(New Dado)
+        dados.Add(New Dado)
+        dados.Add(New Dado)
+        dados.Add(New Dado)
     End Sub
 
-    Private _jugador1 As New JUGADOR
-    Public Property jugador1() As JUGADOR
+    Private _jugador1 As New Jugador
+    Public Property jugador1() As Jugador
         Get
             Return _jugador1
         End Get
-        Set(ByVal value As JUGADOR)
+        Set(ByVal value As Jugador)
             _jugador1 = value
         End Set
     End Property
 
-    Private _jugador2 As New JUGADOR
-    Public Property jugador2() As JUGADOR
+    Private _jugador2 As New Jugador
+    Public Property jugador2() As Jugador
         Get
             Return _jugador2
         End Get
-        Set(ByVal value As JUGADOR)
+        Set(ByVal value As Jugador)
             _jugador2 = value
         End Set
     End Property
 
-    Private _cubilete As New CUBILETE
-    Public Property cubilete() As CUBILETE
+    Private _cubilete As New Cubilete
+    Public Property cubilete() As Cubilete
         Get
             Return _cubilete
         End Get
-        Set(ByVal value As CUBILETE)
+        Set(ByVal value As Cubilete)
             _cubilete = value
         End Set
     End Property
 
-    Private _dado1 As New DADO
-    Public Property dado1() As DADO
-        Get
-            Return _dado1
-        End Get
-        Set(ByVal value As DADO)
-            _dado1 = value
-        End Set
-    End Property
-
-    Private _dado2 As New DADO
-    Public Property dado2() As DADO
-        Get
-            Return _dado2
-        End Get
-        Set(ByVal value As DADO)
-            _dado2 = value
-        End Set
-    End Property
-
-    Private _dado3 As New DADO
-    Public Property dado3() As DADO
-        Get
-            Return _dado3
-        End Get
-        Set(ByVal value As DADO)
-            _dado3 = value
-        End Set
-    End Property
-
-    Private _dado4 As New DADO
-    Public Property dado4() As DADO
-        Get
-            Return _dado4
-        End Get
-        Set(ByVal value As DADO)
-            _dado4 = value
-        End Set
-    End Property
-
-    Private _dado5 As New DADO
-    Public Property dado5() As DADO
-        Get
-            Return _dado5
-        End Get
-        Set(ByVal value As DADO)
-            _dado5 = value
-        End Set
-    End Property
-
-    Private _dados As New List(Of DADO)
-    Public Property dados() As List(Of DADO)
+    Private _dados As New List(Of Dado)
+    Public Property dados() As List(Of Dado)
         Get
             Return _dados
         End Get
-        Set(ByVal value As List(Of DADO))
+        Set(ByVal value As List(Of Dado))
             _dados = value
         End Set
     End Property

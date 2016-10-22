@@ -1,40 +1,50 @@
 ﻿Public Class Form1
 
-    Dim Partida As New BE.PARTIDA
+    Dim Partida As New BE.Partida
     Dim Cubilete As New BLL.CUBILETE
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
-    End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
 
         Cubilete.llenar(Partida.dados)
         Cubilete.volcar()
         Actualizar()
-
+        Cubilete.vaciar()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-    End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        'Cubilete.llenar(Partida.dados)
         Cubilete.volcar()
+        Cubilete.vaciar()
         Actualizar()
     End Sub
 
     Private Sub Actualizar()
-        Button1.Text = Partida.dado1.numero
-        Button2.Text = Partida.dado2.numero
-        Button3.Text = Partida.dado3.numero
-        Button4.Text = Partida.dado4.numero
-        Button5.Text = Partida.dado5.numero
+        BDado0.Text = Partida.dados(0).numero
+        BDado1.Text = Partida.dados(1).numero
+        BDado2.Text = Partida.dados(2).numero
+        BDado3.Text = Partida.dados(3).numero
+        BDado4.Text = Partida.dados(4).numero
     End Sub
 
+    Private Sub BDado0_Click(sender As Object, e As EventArgs) Handles BDado0.Click
+        Cubilete.enviar(Partida.dados(0))
+    End Sub
+
+    Private Sub BDado1_Click(sender As Object, e As EventArgs) Handles BDado1.Click
+        Cubilete.enviar(Partida.dados(1))
+    End Sub
+
+    Private Sub BDado2_Click(sender As Object, e As EventArgs) Handles BDado2.Click
+        Cubilete.enviar(Partida.dados(2))
+    End Sub
+
+    Private Sub BDado3_Click(sender As Object, e As EventArgs) Handles BDado3.Click
+        Cubilete.enviar(Partida.dados(3))
+    End Sub
+
+    Private Sub BDado4_Click(sender As Object, e As EventArgs) Handles BDado4.Click
+        Cubilete.enviar(Partida.dados(4))
+    End Sub
 End Class

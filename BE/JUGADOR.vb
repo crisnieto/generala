@@ -54,4 +54,14 @@
         End Set
     End Property
 
+    Private _puntaje As Integer
+    Public Property puntaje() As Integer
+        Get
+            Return _puntaje
+        End Get
+        Set(ByVal value As Integer)
+            _puntaje = value
+        End Set
+    End Property
+
 End Class

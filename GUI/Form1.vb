@@ -24,12 +24,12 @@
     End Sub
 
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub btnTirar_Click(sender As Object, e As EventArgs) Handles btnTirar.Click
         If Cubilete.tieneContenido Then
             Cubilete.volcar()
             Cubilete.vaciar()
             mostrar()
-            Button6.Enabled = Turno.calcular()
+            btnTirar.Enabled = Turno.calcular()
             Actualizar()
         End If
     End Sub
@@ -42,6 +42,9 @@
         BDado4.Text = Partida.dados(4).numero
         Calculador.borrarCalculos(Turno)
         Calculador.calcularPosibilidades(Partida.dados, Turno)
+        Calculador.calcularPuntajes(Partida)
+        Label5.Text = Partida.jugadores(0).puntaje
+        Label6.Text = Partida.jugadores(1).puntaje
         ActualizarGrids()
     End Sub
 
@@ -95,14 +98,14 @@
         Cubilete.llenar(Partida.dados)
         Calculador.borrarCalculos(Turno)
         ActualizarGrids()
-        Turno.proximoJugador()
+        Turno.proximoJugador(Partida)
         BDado0.Visible = False
         BDado1.Visible = False
         BDado2.Visible = False
         BDado3.Visible = False
         BDado4.Visible = False
         Cubilete.llenar(Partida.dados)
-        Button6.Enabled = True
+        btnTirar.Enabled = True
     End Sub
 
     Public Sub mostrar()
@@ -133,7 +136,7 @@
 
     Public Sub anotar(jugador As BE.Jugador, dgv As DataGridView)
         Dim categoria As BE.Categoria = dgv.SelectedRows(0).DataBoundItem
-        Dim msgBoxText As String = "¿Asignar " & categoria.puntos & "a " & categoria.nombre & "?"
+        Dim msgBoxText As String = "¿Asignar " & categoria.puntos & " a la categoría " & categoria.nombre & "?"
         If categoria.asignado = False And Turno.numeroTiro >= 1 And Turno.conseguirJugadorActual.Equals(jugador) Then
             If MsgBox(msgBoxText, MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
                 categoria.asignado = True
@@ -141,6 +144,79 @@
                 ActualizarGrids()
             End If
         End If
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btnGeneralaDoble.Click
+
+    End Sub
+
+    Private Sub btnFull_Click(sender As Object, e As EventArgs) Handles btnFull.Click
+        Cubilete.vaciar()
+        Cubilete.llenar(Partida.dados)
+        Dim lista As New List(Of Integer) From {2, 2, 2, 3, 3}
+        If Cubilete.tieneContenido Then
+            Cubilete.volcar(lista)
+            Cubilete.vaciar()
+            mostrar()
+            btnFull.Enabled = Turno.calcular()
+            Actualizar()
+        End If
+    End Sub
+
+    Private Sub btnEscalera_Click(sender As Object, e As EventArgs) Handles btnEscalera.Click
+        Cubilete.vaciar()
+        Cubilete.llenar(Partida.dados)
+        Dim lista As New List(Of Integer) From {1, 2, 3, 4, 5, 6}
+        If Cubilete.tieneContenido Then
+            Cubilete.volcar(lista)
+            Cubilete.vaciar()
+            mostrar()
+            btnFull.Enabled = Turno.calcular()
+            Actualizar()
+        End If
+    End Sub
+
+    Private Sub btnDoble_Click(sender As Object, e As EventArgs) Handles btnDoble.Click
+        Cubilete.vaciar()
+        Cubilete.llenar(Partida.dados)
+        Dim lista As New List(Of Integer) From {2, 2, 1, 3, 3}
+        If Cubilete.tieneContenido Then
+            Cubilete.volcar(lista)
+            Cubilete.vaciar()
+            mostrar()
+            btnFull.Enabled = Turno.calcular()
+            Actualizar()
+        End If
+    End Sub
+
+    Private Sub btnPoker_Click(sender As Object, e As EventArgs) Handles btnPoker.Click
+        Cubilete.vaciar()
+        Cubilete.llenar(Partida.dados)
+        Dim lista As New List(Of Integer) From {5, 1, 5, 5, 5}
+        If Cubilete.tieneContenido Then
+            Cubilete.volcar(lista)
+            Cubilete.vaciar()
+            mostrar()
+            btnFull.Enabled = Turno.calcular()
+            Actualizar()
+        End If
+    End Sub
+
+    Private Sub btnGenerala_Click(sender As Object, e As EventArgs) Handles btnGenerala.Click
+        Cubilete.vaciar()
+        Cubilete.llenar(Partida.dados)
+        Dim lista As New List(Of Integer) From {4, 4, 4, 4, 4}
+        If Cubilete.tieneContenido Then
+            Cubilete.volcar(lista)
+            Cubilete.vaciar()
+            mostrar()
+            btnFull.Enabled = Turno.calcular()
+            Actualizar()
+        End If
+    End Sub
+
+    Public Sub DeshabilitarBotonesDePrueba()
+        btnFull.Enabled = False
     End Sub
 
 End Class

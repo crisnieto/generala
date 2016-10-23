@@ -36,6 +36,21 @@
         Return dados
     End Function
 
+    Public Function volcar(numeros As List(Of Integer)) As List(Of BE.Dado)
+        'Esta función sirve solo para probar diferentes combinaciones. No forma parte del juego.
+        Dim dados As New List(Of BE.Dado)
+        Dim counter As Integer = 0
+        dados = cubilete.dados
+        For Each dado As BE.Dado In dados
+            Dim numero As Integer = numeros(counter)
+            dado.numero = numero
+            dado.tirado = True
+            counter += 1
+        Next
+        Return dados
+    End Function
+
+
     Public Sub vaciar()
         cubilete.dados = Nothing
         cubilete.dados = New List(Of BE.Dado)

@@ -6,8 +6,8 @@
         dados.Add(New Dado)
         dados.Add(New Dado)
         dados.Add(New Dado)
-        jugadores.Add(New Jugador)
-        jugadores.Add(New Jugador)
+        jugadores.Add(New Jugador("Jugador1"))
+        jugadores.Add(New Jugador("Jugador 2"))
     End Sub
 
     Private _jugadores As New List(Of Jugador)
@@ -20,23 +20,13 @@
         End Set
     End Property
 
-    Private _jugador1 As New Jugador
-    Public Property jugador1() As Jugador
+    Private _ganador As New Jugador
+    Public Property ganador() As Jugador
         Get
-            Return _jugador1
+            Return _ganador
         End Get
         Set(ByVal value As Jugador)
-            _jugador1 = value
-        End Set
-    End Property
-
-    Private _jugador2 As New Jugador
-    Public Property jugador2() As Jugador
-        Get
-            Return _jugador2
-        End Get
-        Set(ByVal value As Jugador)
-            _jugador2 = value
+            _ganador = value
         End Set
     End Property
 

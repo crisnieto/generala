@@ -63,6 +63,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categoria.vb" />
     <Compile Include="Cubilete.vb" />
     <Compile Include="Dado.vb" />
     <Compile Include="Jugador.vb" />
@@ -82,7 +83,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Partida.vb" />
-    <Compile Include="Puntaje.vb" />
     <Compile Include="Turno.vb" />
   </ItemGroup>
   <ItemGroup>

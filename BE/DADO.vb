@@ -1,7 +1,7 @@
 ﻿Public Class Dado
 
     Public Sub New()
-        numero = 1
+        numero = 0
         tirado = False
     End Sub
 

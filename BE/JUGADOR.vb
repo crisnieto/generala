@@ -44,4 +44,14 @@
         End Set
     End Property
 
+    Private _categorias As List(Of Categoria)
+    Public Property categorias() As List(Of Categoria)
+        Get
+            Return _categorias
+        End Get
+        Set(ByVal value As List(Of Categoria))
+            _categorias = value
+        End Set
+    End Property
+
 End Class

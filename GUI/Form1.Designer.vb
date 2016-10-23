@@ -39,7 +39,7 @@ Partial Class Form1
         '
         'BDado3
         '
-        Me.BDado3.Location = New System.Drawing.Point(809, 245)
+        Me.BDado3.Location = New System.Drawing.Point(942, 273)
         Me.BDado3.Name = "BDado3"
         Me.BDado3.Size = New System.Drawing.Size(96, 84)
         Me.BDado3.TabIndex = 0
@@ -49,7 +49,7 @@ Partial Class Form1
         '
         'BDado0
         '
-        Me.BDado0.Location = New System.Drawing.Point(503, 245)
+        Me.BDado0.Location = New System.Drawing.Point(636, 273)
         Me.BDado0.Name = "BDado0"
         Me.BDado0.Size = New System.Drawing.Size(96, 84)
         Me.BDado0.TabIndex = 1
@@ -59,7 +59,7 @@ Partial Class Form1
         '
         'BDado1
         '
-        Me.BDado1.Location = New System.Drawing.Point(605, 245)
+        Me.BDado1.Location = New System.Drawing.Point(738, 273)
         Me.BDado1.Name = "BDado1"
         Me.BDado1.Size = New System.Drawing.Size(96, 84)
         Me.BDado1.TabIndex = 2
@@ -69,7 +69,7 @@ Partial Class Form1
         '
         'BDado2
         '
-        Me.BDado2.Location = New System.Drawing.Point(707, 245)
+        Me.BDado2.Location = New System.Drawing.Point(840, 273)
         Me.BDado2.Name = "BDado2"
         Me.BDado2.Size = New System.Drawing.Size(96, 84)
         Me.BDado2.TabIndex = 3
@@ -79,7 +79,7 @@ Partial Class Form1
         '
         'BDado4
         '
-        Me.BDado4.Location = New System.Drawing.Point(911, 245)
+        Me.BDado4.Location = New System.Drawing.Point(1044, 273)
         Me.BDado4.Name = "BDado4"
         Me.BDado4.Size = New System.Drawing.Size(96, 84)
         Me.BDado4.TabIndex = 4
@@ -89,9 +89,9 @@ Partial Class Form1
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(658, 12)
+        Me.Button6.Location = New System.Drawing.Point(738, 26)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(210, 84)
+        Me.Button6.Size = New System.Drawing.Size(300, 84)
         Me.Button6.TabIndex = 5
         Me.Button6.Text = "Tirar"
         Me.Button6.UseVisualStyleBackColor = True
@@ -100,18 +100,20 @@ Partial Class Form1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(12, 93)
+        Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Height = 33
-        Me.DataGridView1.Size = New System.Drawing.Size(361, 608)
+        Me.DataGridView1.Size = New System.Drawing.Size(527, 807)
         Me.DataGridView1.TabIndex = 6
         '
         'DataGridView2
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(1215, 93)
+        Me.DataGridView2.Location = New System.Drawing.Point(1277, 93)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowTemplate.Height = 33
-        Me.DataGridView2.Size = New System.Drawing.Size(361, 608)
+        Me.DataGridView2.Size = New System.Drawing.Size(560, 807)
         Me.DataGridView2.TabIndex = 7
         '
         'Label1
@@ -126,7 +128,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(1210, 56)
+        Me.Label2.Location = New System.Drawing.Point(1272, 56)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(77, 25)
         Me.Label2.TabIndex = 9
@@ -134,9 +136,9 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(621, 655)
+        Me.Button1.Location = New System.Drawing.Point(738, 799)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(298, 46)
+        Me.Button1.Size = New System.Drawing.Size(300, 46)
         Me.Button1.TabIndex = 10
         Me.Button1.Text = "Anotar Prueba"
         Me.Button1.UseVisualStyleBackColor = True
@@ -145,7 +147,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1595, 735)
+        Me.ClientSize = New System.Drawing.Size(1849, 948)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)

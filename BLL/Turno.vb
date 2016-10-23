@@ -29,4 +29,15 @@
         Return turno.jugadorActual
     End Function
 
+    Public Function conseguirJugadorActual() As BE.Jugador
+        Return turno.jugadorActual
+    End Function
+
+    Public Function numeroTiro() As Integer
+        Return turno.tiro
+    End Function
+
+
+
+
 End Class

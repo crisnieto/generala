@@ -41,7 +41,12 @@
         cubilete.dados = New List(Of BE.Dado)
     End Sub
 
-    Public Sub remover(dado As BE.Dado)
+    Public Function tieneContenido() As Boolean
+        If cubilete.dados.Count > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 
-    End Sub
 End Class

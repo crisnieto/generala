@@ -2,22 +2,24 @@
 
     Dim Partida As New BE.Partida
     Dim Cubilete As New BLL.CUBILETE
+    Dim Turno As New BLL.Turno(Partida.jugadores)
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Label1.Text = Partida.jugadores(0).user
+        Label2.Text = Partida.jugadores(1).user
         Cubilete.llenar(Partida.dados)
-        Cubilete.volcar()
-        Actualizar()
-        Cubilete.vaciar()
     End Sub
 
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        'Cubilete.llenar(Partida.dados)
-        Cubilete.volcar()
-        Cubilete.vaciar()
-        Actualizar()
+        If Cubilete.tieneContenido Then
+            Cubilete.volcar()
+            Cubilete.vaciar()
+            mostrar()
+            Button6.Enabled = Turno.calcular()
+            Actualizar()
+        End If
     End Sub
 
     Private Sub Actualizar()
@@ -47,4 +49,29 @@
     Private Sub BDado4_Click(sender As Object, e As EventArgs) Handles BDado4.Click
         Cubilete.enviar(Partida.dados(4))
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        anotar()
+    End Sub
+
+    Public Sub anotar()
+        Cubilete.llenar(Partida.dados)
+        Turno.proximoJugador()
+        BDado0.Visible = False
+        BDado1.Visible = False
+        BDado2.Visible = False
+        BDado3.Visible = False
+        BDado4.Visible = False
+        Cubilete.llenar(Partida.dados)
+        Button6.Enabled = True
+    End Sub
+
+    Public Sub mostrar()
+        BDado0.Visible = True
+        BDado1.Visible = True
+        BDado2.Visible = True
+        BDado3.Visible = True
+        BDado4.Visible = True
+    End Sub
+
 End Class

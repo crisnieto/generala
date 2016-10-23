@@ -83,6 +83,7 @@
     </Compile>
     <Compile Include="Partida.vb" />
     <Compile Include="Puntaje.vb" />
+    <Compile Include="Turno.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

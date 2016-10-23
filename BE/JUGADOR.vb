@@ -1,4 +1,9 @@
 ﻿Public Class Jugador
+
+    Public Sub New(Optional usuario As String = "Jugador")
+        user = usuario
+    End Sub
+
     Private _user As String
     Public Property user() As String
         Get

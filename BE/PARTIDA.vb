@@ -6,7 +6,19 @@
         dados.Add(New Dado)
         dados.Add(New Dado)
         dados.Add(New Dado)
+        jugadores.Add(New Jugador)
+        jugadores.Add(New Jugador)
     End Sub
+
+    Private _jugadores As New List(Of Jugador)
+    Public Property jugadores() As List(Of Jugador)
+        Get
+            Return _jugadores
+        End Get
+        Set(ByVal value As List(Of Jugador))
+            _jugadores = value
+        End Set
+    End Property
 
     Private _jugador1 As New Jugador
     Public Property jugador1() As Jugador
@@ -47,5 +59,4 @@
             _dados = value
         End Set
     End Property
-
 End Class

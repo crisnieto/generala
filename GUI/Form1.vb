@@ -1,9 +1,15 @@
-﻿Public Class Form1
+﻿Imports System.IO
+Imports System.Threading
+Public Class Form1
 
     Dim Partida As New BE.Partida
     Dim Cubilete As New BLL.CUBILETE
     Dim Calculador As New BLL.Calculador
     Dim Turno As New BLL.Turno(Partida.jugadores)
+    Dim mypath As String = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\dice_states\\"))
+    'Dim myAnimationPath As String = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\dice_states\\"))
+    Dim actualPictureBox As PictureBox
+    Dim botonesTiro As New List(Of Button)
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -20,6 +26,7 @@
         Calculador.asignarCategorias(Partida.jugadores(0))
         Calculador.asignarCategorias(Partida.jugadores(1))
         Cubilete.llenar(Partida.dados)
+        botonesTiro.AddRange({btnTirar, btnDoble, btnEscalera, btnFull, btnGenerala, btnPoker})
         Actualizar()
     End Sub
 
@@ -29,7 +36,7 @@
             Cubilete.volcar()
             Cubilete.vaciar()
             mostrar()
-            btnTirar.Enabled = Turno.calcular()
+            EstadoBotonesDePrueba()
             Actualizar()
         End If
     End Sub
@@ -40,6 +47,14 @@
         BDado2.Text = Partida.dados(2).numero
         BDado3.Text = Partida.dados(3).numero
         BDado4.Text = Partida.dados(4).numero
+        Dice0.ImageLocation = CargarImagenDado(Partida.dados(0))
+        Dice1.ImageLocation = CargarImagenDado(Partida.dados(1))
+        Dice2.ImageLocation = CargarImagenDado(Partida.dados(2))
+        Dice3.ImageLocation = CargarImagenDado(Partida.dados(3))
+        Dice4.ImageLocation = CargarImagenDado(Partida.dados(4))
+
+
+
         Calculador.borrarCalculos(Turno)
         Calculador.calcularPosibilidades(Partida.dados, Turno)
         Calculador.calcularPuntajes(Partida)
@@ -54,18 +69,43 @@
         DataGridStyle(DataGridView1)
         DataGridView1.Columns(2).Visible = False
         For Each row As DataGridViewRow In DataGridView1.Rows
+            Dim categoria As BE.Categoria = row.DataBoundItem
             row.DefaultCellStyle.SelectionBackColor = row.DefaultCellStyle.BackColor
             row.DefaultCellStyle.SelectionForeColor = row.DefaultCellStyle.ForeColor
-        Next
+            If categoria.puntos <> 0 And categoria.asignado = False Then
+                row.DefaultCellStyle.BackColor = Color.LightBlue
+                row.DefaultCellStyle.SelectionBackColor = row.DefaultCellStyle.BackColor
+                row.DefaultCellStyle.SelectionForeColor = row.DefaultCellStyle.ForeColor
+            Else
+                If categoria.puntos = 0 And categoria.asignado = False And Turno.conseguirJugadorActual.Equals(Partida.jugadores(0)) Then
+                    row.DefaultCellStyle.BackColor = Color.LightSalmon
+                    row.DefaultCellStyle.SelectionBackColor = row.DefaultCellStyle.BackColor
+                    row.DefaultCellStyle.SelectionForeColor = row.DefaultCellStyle.ForeColor
+                End If
+            End If
 
+
+        Next
 
         DataGridView2.DataSource = Nothing
         DataGridView2.DataSource = Partida.jugadores(1).categorias
         DataGridStyle(DataGridView2)
         DataGridView2.Columns(2).Visible = False
         For Each row As DataGridViewRow In DataGridView2.Rows
+            Dim categoria As BE.Categoria = row.DataBoundItem
             row.DefaultCellStyle.SelectionBackColor = row.DefaultCellStyle.BackColor
             row.DefaultCellStyle.SelectionForeColor = row.DefaultCellStyle.ForeColor
+            If categoria.puntos <> 0 And categoria.asignado = False Then
+                row.DefaultCellStyle.BackColor = Color.LightBlue
+                row.DefaultCellStyle.SelectionBackColor = row.DefaultCellStyle.BackColor
+                row.DefaultCellStyle.SelectionForeColor = row.DefaultCellStyle.ForeColor
+            Else
+                If categoria.puntos = 0 And categoria.asignado = False And Turno.conseguirJugadorActual.Equals(Partida.jugadores(1)) Then
+                    row.DefaultCellStyle.BackColor = Color.LightSalmon
+                    row.DefaultCellStyle.SelectionBackColor = row.DefaultCellStyle.BackColor
+                    row.DefaultCellStyle.SelectionForeColor = row.DefaultCellStyle.ForeColor
+                End If
+            End If
         Next
     End Sub
 
@@ -89,7 +129,7 @@
         Cubilete.enviar(Partida.dados(4))
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         prepararSiguienteJugada()
     End Sub
 
@@ -104,8 +144,13 @@
         BDado2.Visible = False
         BDado3.Visible = False
         BDado4.Visible = False
+        Dice0.Visible = False
+        Dice1.Visible = False
+        Dice2.Visible = False
+        Dice3.Visible = False
+        Dice4.Visible = False
         Cubilete.llenar(Partida.dados)
-        btnTirar.Enabled = True
+        HabilitarBotones()
     End Sub
 
     Public Sub mostrar()
@@ -114,6 +159,11 @@
         BDado2.Visible = True
         BDado3.Visible = True
         BDado4.Visible = True
+        Dice0.Visible = True
+        Dice1.Visible = True
+        Dice2.Visible = True
+        Dice3.Visible = True
+        Dice4.Visible = True
     End Sub
 
     Public Sub DataGridStyle(datagrid As DataGridView)
@@ -121,6 +171,9 @@
             Dim categoria As BE.Categoria = row.DataBoundItem
             If categoria.asignado = True Then
                 row.DefaultCellStyle.BackColor = Color.Yellow
+            End If
+            If categoria.asignado = False Then
+                row.DefaultCellStyle.BackColor = Color.White
             End If
         Next
 
@@ -146,7 +199,7 @@
         End If
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles btnGeneralaDoble.Click
+    Private Sub Button7_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -158,7 +211,7 @@
             Cubilete.volcar(lista)
             Cubilete.vaciar()
             mostrar()
-            btnFull.Enabled = Turno.calcular()
+            EstadoBotonesDePrueba()
             Actualizar()
         End If
     End Sub
@@ -171,7 +224,7 @@
             Cubilete.volcar(lista)
             Cubilete.vaciar()
             mostrar()
-            btnFull.Enabled = Turno.calcular()
+            EstadoBotonesDePrueba()
             Actualizar()
         End If
     End Sub
@@ -184,7 +237,7 @@
             Cubilete.volcar(lista)
             Cubilete.vaciar()
             mostrar()
-            btnFull.Enabled = Turno.calcular()
+            EstadoBotonesDePrueba()
             Actualizar()
         End If
     End Sub
@@ -197,7 +250,7 @@
             Cubilete.volcar(lista)
             Cubilete.vaciar()
             mostrar()
-            btnFull.Enabled = Turno.calcular()
+            EstadoBotonesDePrueba()
             Actualizar()
         End If
     End Sub
@@ -210,13 +263,68 @@
             Cubilete.volcar(lista)
             Cubilete.vaciar()
             mostrar()
-            btnFull.Enabled = Turno.calcular()
+            EstadoBotonesDePrueba()
             Actualizar()
         End If
     End Sub
 
-    Public Sub DeshabilitarBotonesDePrueba()
-        btnFull.Enabled = False
+    Public Sub EstadoBotonesDePrueba()
+        Dim estado As Boolean = Turno.calcular
+        For Each boton As Button In botonesTiro
+            boton.Enabled = estado
+        Next
+    End Sub
+
+    Public Sub HabilitarBotones()
+        For Each boton As Button In botonesTiro
+            boton.Enabled = True
+        Next
+    End Sub
+
+    Public Function CargarImagenDado(dado As BE.Dado) As String
+        Dim numero As Integer = dado.numero
+        If numero >= 1 Then
+            Dim nombre As String = numero.ToString + ".png"
+            Return IO.Path.Combine(mypath, nombre)
+        End If
+
+    End Function
+
+    Public Function UpdateImagenDado(dado As BE.Dado) As String
+        Dim numero As Integer = dado.numero
+        If numero >= 1 And dado.tirado = False Then
+            Dim nombre As String = numero.ToString + "c.png"
+            Return IO.Path.Combine(mypath, nombre)
+        Else
+            Dim nombre As String = numero.ToString + ".png"
+            Return IO.Path.Combine(mypath, nombre)
+        End If
+
+    End Function
+
+    Private Sub Dice0_Click(sender As Object, e As EventArgs) Handles Dice0.Click
+        Cubilete.enviar(Partida.dados(0))
+        Dice0.ImageLocation = UpdateImagenDado(Partida.dados(0))
+    End Sub
+
+    Private Sub Dice1_Click(sender As Object, e As EventArgs) Handles Dice1.Click
+        Cubilete.enviar(Partida.dados(1))
+        Dice1.ImageLocation = UpdateImagenDado(Partida.dados(1))
+    End Sub
+
+    Private Sub Dice2_Click(sender As Object, e As EventArgs) Handles Dice2.Click
+        Cubilete.enviar(Partida.dados(2))
+        Dice2.ImageLocation = UpdateImagenDado(Partida.dados(2))
+    End Sub
+
+    Private Sub Dice3_Click(sender As Object, e As EventArgs) Handles Dice3.Click
+        Cubilete.enviar(Partida.dados(3))
+        Dice3.ImageLocation = UpdateImagenDado(Partida.dados(3))
+    End Sub
+
+    Private Sub Dice4_Click(sender As Object, e As EventArgs) Handles Dice4.Click
+        Cubilete.enviar(Partida.dados(4))
+        Dice4.ImageLocation = UpdateImagenDado(Partida.dados(4))
     End Sub
 
 End Class

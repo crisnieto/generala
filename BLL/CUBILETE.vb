@@ -64,4 +64,8 @@
         End If
     End Function
 
+    Public Function conseguirContenido() As List(Of BE.Dado)
+        Return cubilete.dados
+    End Function
+
 End Class

@@ -7,7 +7,7 @@
         dados.Add(New Dado)
         dados.Add(New Dado)
         jugadores.Add(New Jugador("Jugador1"))
-        jugadores.Add(New Jugador("Jugador 2"))
+        jugadores.Add(New Jugador("Jugador2"))
     End Sub
 
     Private _jugadores As New List(Of Jugador)

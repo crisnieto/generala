@@ -64,4 +64,24 @@
         End Set
     End Property
 
+    Private _logged As Boolean
+    Public Property logged() As Boolean
+        Get
+            Return _logged
+        End Get
+        Set(ByVal value As Boolean)
+            _logged = value
+        End Set
+    End Property
+
+    Private _resultado As String
+    Public Property resultado() As String
+        Get
+            Return _resultado
+        End Get
+        Set(ByVal value As String)
+            _resultado = value
+        End Set
+    End Property
+
 End Class

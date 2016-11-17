@@ -45,10 +45,11 @@
     End Sub
 
     Public Sub calcularCategoriasComplejas(categorias As List(Of BE.Categoria), dados As List(Of BE.Dado), turno As Turno)
-        Dim cDoble As BE.Categoria = buscarCategoria("Doble", categorias)
-        If cDoble.asignado = False Then
-            cDoble.puntos = calcularDoble(dados, turno)
-        End If
+
+        'Dim cDoble As BE.Categoria = buscarCategoria("Doble", categorias)
+        'If cDoble.asignado = False Then
+        'cDoble.puntos = calcularDoble(dados, turno)
+        'End If
 
         Dim cEscalera As BE.Categoria = buscarCategoria("Escalera", categorias)
         If cEscalera.asignado = False Then
@@ -90,7 +91,7 @@
         Dim cat4 As New BE.Categoria("4")
         Dim cat5 As New BE.Categoria("5")
         Dim cat6 As New BE.Categoria("6")
-        Dim catDoble As New BE.Categoria("Doble")
+        'Dim catDoble As New BE.Categoria("Doble")
         Dim catEscalera As New BE.Categoria("Escalera")
         Dim catFull As New BE.Categoria("Full")
         Dim catPoker As New BE.Categoria("Poker")
@@ -104,7 +105,7 @@
         listaCat.Add(cat4)
         listaCat.Add(cat5)
         listaCat.Add(cat6)
-        listaCat.Add(catDoble)
+        'listaCat.Add(catDoble)
         listaCat.Add(catEscalera)
         listaCat.Add(catFull)
         listaCat.Add(catPoker)

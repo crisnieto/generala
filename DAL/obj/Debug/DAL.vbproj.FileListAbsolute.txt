@@ -1,0 +1,12 @@
+C:\Users\Cristian\Desktop\generala\Generala\DAL\bin\Debug\DAL.dll
+C:\Users\Cristian\Desktop\generala\Generala\DAL\bin\Debug\DAL.pdb
+C:\Users\Cristian\Desktop\generala\Generala\DAL\bin\Debug\DAL.xml
+C:\Users\Cristian\Desktop\generala\Generala\DAL\bin\Debug\BE.dll
+C:\Users\Cristian\Desktop\generala\Generala\DAL\bin\Debug\BE.pdb
+C:\Users\Cristian\Desktop\generala\Generala\DAL\bin\Debug\BE.xml
+C:\Users\Cristian\Desktop\generala\Generala\DAL\obj\Debug\DAL.vbprojResolveAssemblyReference.cache
+C:\Users\Cristian\Desktop\generala\Generala\DAL\obj\Debug\DAL.Resources.resources
+C:\Users\Cristian\Desktop\generala\Generala\DAL\obj\Debug\DAL.vbproj.GenerateResource.Cache
+C:\Users\Cristian\Desktop\generala\Generala\DAL\obj\Debug\DAL.dll
+C:\Users\Cristian\Desktop\generala\Generala\DAL\obj\Debug\DAL.xml
+C:\Users\Cristian\Desktop\generala\Generala\DAL\obj\Debug\DAL.pdb

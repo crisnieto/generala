@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Calculador.vb" />
     <Compile Include="Cubilete.vb" />
+    <Compile Include="Jugador.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -80,6 +81,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Partida.vb" />
     <Compile Include="Turno.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +107,10 @@
     <ProjectReference Include="..\BE\BE.vbproj">
       <Project>{9cd7b37e-845d-4707-b75a-ed39a57f0d4d}</Project>
       <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.vbproj">
+      <Project>{0ab88321-4b0a-4369-a5c9-f07445ec0824}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

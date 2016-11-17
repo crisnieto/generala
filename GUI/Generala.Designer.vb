@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class Generala
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,8 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Generala))
         Me.BDado3 = New System.Windows.Forms.Button()
         Me.BDado0 = New System.Windows.Forms.Button()
         Me.BDado1 = New System.Windows.Forms.Button()
@@ -47,6 +48,7 @@ Partial Class Form1
         Me.Dice2 = New System.Windows.Forms.PictureBox()
         Me.Dice3 = New System.Windows.Forms.PictureBox()
         Me.Dice4 = New System.Windows.Forms.PictureBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Dice0, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,9 +61,10 @@ Partial Class Form1
         'BDado3
         '
         Me.BDado3.Enabled = False
-        Me.BDado3.Location = New System.Drawing.Point(942, 199)
+        Me.BDado3.Location = New System.Drawing.Point(942, 198)
+        Me.BDado3.Margin = New System.Windows.Forms.Padding(4)
         Me.BDado3.Name = "BDado3"
-        Me.BDado3.Size = New System.Drawing.Size(96, 84)
+        Me.BDado3.Size = New System.Drawing.Size(96, 85)
         Me.BDado3.TabIndex = 0
         Me.BDado3.Text = "1"
         Me.BDado3.UseVisualStyleBackColor = True
@@ -70,9 +73,10 @@ Partial Class Form1
         'BDado0
         '
         Me.BDado0.Enabled = False
-        Me.BDado0.Location = New System.Drawing.Point(636, 199)
+        Me.BDado0.Location = New System.Drawing.Point(636, 198)
+        Me.BDado0.Margin = New System.Windows.Forms.Padding(4)
         Me.BDado0.Name = "BDado0"
-        Me.BDado0.Size = New System.Drawing.Size(96, 84)
+        Me.BDado0.Size = New System.Drawing.Size(96, 85)
         Me.BDado0.TabIndex = 1
         Me.BDado0.Text = "1"
         Me.BDado0.UseVisualStyleBackColor = True
@@ -81,9 +85,10 @@ Partial Class Form1
         'BDado1
         '
         Me.BDado1.Enabled = False
-        Me.BDado1.Location = New System.Drawing.Point(738, 199)
+        Me.BDado1.Location = New System.Drawing.Point(738, 198)
+        Me.BDado1.Margin = New System.Windows.Forms.Padding(4)
         Me.BDado1.Name = "BDado1"
-        Me.BDado1.Size = New System.Drawing.Size(96, 84)
+        Me.BDado1.Size = New System.Drawing.Size(96, 85)
         Me.BDado1.TabIndex = 2
         Me.BDado1.Text = "2"
         Me.BDado1.UseVisualStyleBackColor = True
@@ -92,9 +97,10 @@ Partial Class Form1
         'BDado2
         '
         Me.BDado2.Enabled = False
-        Me.BDado2.Location = New System.Drawing.Point(840, 199)
+        Me.BDado2.Location = New System.Drawing.Point(840, 198)
+        Me.BDado2.Margin = New System.Windows.Forms.Padding(4)
         Me.BDado2.Name = "BDado2"
-        Me.BDado2.Size = New System.Drawing.Size(96, 84)
+        Me.BDado2.Size = New System.Drawing.Size(96, 85)
         Me.BDado2.TabIndex = 3
         Me.BDado2.Text = "3"
         Me.BDado2.UseVisualStyleBackColor = True
@@ -103,9 +109,10 @@ Partial Class Form1
         'BDado4
         '
         Me.BDado4.Enabled = False
-        Me.BDado4.Location = New System.Drawing.Point(1044, 199)
+        Me.BDado4.Location = New System.Drawing.Point(1044, 198)
+        Me.BDado4.Margin = New System.Windows.Forms.Padding(4)
         Me.BDado4.Name = "BDado4"
-        Me.BDado4.Size = New System.Drawing.Size(96, 84)
+        Me.BDado4.Size = New System.Drawing.Size(96, 85)
         Me.BDado4.TabIndex = 4
         Me.BDado4.Text = "4"
         Me.BDado4.UseVisualStyleBackColor = True
@@ -113,9 +120,10 @@ Partial Class Form1
         '
         'btnTirar
         '
-        Me.btnTirar.Location = New System.Drawing.Point(738, 93)
+        Me.btnTirar.Location = New System.Drawing.Point(738, 92)
+        Me.btnTirar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTirar.Name = "btnTirar"
-        Me.btnTirar.Size = New System.Drawing.Size(300, 84)
+        Me.btnTirar.Size = New System.Drawing.Size(300, 85)
         Me.btnTirar.TabIndex = 5
         Me.btnTirar.Text = "Tirar"
         Me.btnTirar.UseVisualStyleBackColor = True
@@ -126,6 +134,7 @@ Partial Class Form1
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(12, 144)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -138,7 +147,8 @@ Partial Class Form1
         Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(1277, 144)
+        Me.DataGridView2.Location = New System.Drawing.Point(1276, 144)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowTemplate.Height = 33
         Me.DataGridView2.Size = New System.Drawing.Size(532, 550)
@@ -150,7 +160,8 @@ Partial Class Form1
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe Print", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(12, 84)
+        Me.Label1.Location = New System.Drawing.Point(12, 85)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(132, 57)
         Me.Label1.TabIndex = 8
@@ -162,7 +173,8 @@ Partial Class Form1
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe Print", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(1277, 84)
+        Me.Label2.Location = New System.Drawing.Point(1276, 85)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(132, 57)
         Me.Label2.TabIndex = 9
@@ -171,17 +183,19 @@ Partial Class Form1
         'btnEscalera
         '
         Me.btnEscalera.Location = New System.Drawing.Point(698, 12)
+        Me.btnEscalera.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEscalera.Name = "btnEscalera"
-        Me.btnEscalera.Size = New System.Drawing.Size(123, 48)
+        Me.btnEscalera.Size = New System.Drawing.Size(124, 48)
         Me.btnEscalera.TabIndex = 11
         Me.btnEscalera.Text = "Escalera"
         Me.btnEscalera.UseVisualStyleBackColor = True
         '
         'btnFull
         '
-        Me.btnFull.Location = New System.Drawing.Point(827, 12)
+        Me.btnFull.Location = New System.Drawing.Point(828, 12)
+        Me.btnFull.Margin = New System.Windows.Forms.Padding(4)
         Me.btnFull.Name = "btnFull"
-        Me.btnFull.Size = New System.Drawing.Size(123, 48)
+        Me.btnFull.Size = New System.Drawing.Size(124, 48)
         Me.btnFull.TabIndex = 12
         Me.btnFull.Text = "Full"
         Me.btnFull.UseVisualStyleBackColor = True
@@ -189,26 +203,29 @@ Partial Class Form1
         'btnPoker
         '
         Me.btnPoker.Location = New System.Drawing.Point(956, 12)
+        Me.btnPoker.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPoker.Name = "btnPoker"
-        Me.btnPoker.Size = New System.Drawing.Size(123, 48)
+        Me.btnPoker.Size = New System.Drawing.Size(124, 48)
         Me.btnPoker.TabIndex = 13
         Me.btnPoker.Text = "Poker"
         Me.btnPoker.UseVisualStyleBackColor = True
         '
         'btnGenerala
         '
-        Me.btnGenerala.Location = New System.Drawing.Point(1085, 12)
+        Me.btnGenerala.Location = New System.Drawing.Point(1084, 12)
+        Me.btnGenerala.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGenerala.Name = "btnGenerala"
-        Me.btnGenerala.Size = New System.Drawing.Size(123, 48)
+        Me.btnGenerala.Size = New System.Drawing.Size(124, 48)
         Me.btnGenerala.TabIndex = 14
         Me.btnGenerala.Text = "Generala"
         Me.btnGenerala.UseVisualStyleBackColor = True
         '
         'btnDoble
         '
-        Me.btnDoble.Location = New System.Drawing.Point(565, 12)
+        Me.btnDoble.Location = New System.Drawing.Point(564, 12)
+        Me.btnDoble.Margin = New System.Windows.Forms.Padding(4)
         Me.btnDoble.Name = "btnDoble"
-        Me.btnDoble.Size = New System.Drawing.Size(123, 48)
+        Me.btnDoble.Size = New System.Drawing.Size(124, 48)
         Me.btnDoble.TabIndex = 16
         Me.btnDoble.Text = "Doble"
         Me.btnDoble.UseVisualStyleBackColor = True
@@ -219,7 +236,8 @@ Partial Class Form1
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe Print", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(12, 697)
+        Me.Label3.Location = New System.Drawing.Point(12, 696)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(266, 57)
         Me.Label3.TabIndex = 17
@@ -231,7 +249,8 @@ Partial Class Form1
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe Print", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(1277, 697)
+        Me.Label4.Location = New System.Drawing.Point(1276, 696)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(266, 57)
         Me.Label4.TabIndex = 18
@@ -243,7 +262,8 @@ Partial Class Form1
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe Print", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(284, 697)
+        Me.Label5.Location = New System.Drawing.Point(284, 696)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(132, 57)
         Me.Label5.TabIndex = 19
@@ -255,7 +275,8 @@ Partial Class Form1
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe Print", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(1549, 697)
+        Me.Label6.Location = New System.Drawing.Point(1548, 696)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(132, 57)
         Me.Label6.TabIndex = 20
@@ -266,6 +287,7 @@ Partial Class Form1
         Me.Dice0.BackColor = System.Drawing.Color.Transparent
         Me.Dice0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Dice0.Location = New System.Drawing.Point(596, 317)
+        Me.Dice0.Margin = New System.Windows.Forms.Padding(4)
         Me.Dice0.Name = "Dice0"
         Me.Dice0.Size = New System.Drawing.Size(200, 200)
         Me.Dice0.TabIndex = 21
@@ -275,6 +297,7 @@ Partial Class Form1
         '
         Me.Dice1.BackColor = System.Drawing.Color.Transparent
         Me.Dice1.Location = New System.Drawing.Point(802, 317)
+        Me.Dice1.Margin = New System.Windows.Forms.Padding(4)
         Me.Dice1.Name = "Dice1"
         Me.Dice1.Size = New System.Drawing.Size(200, 200)
         Me.Dice1.TabIndex = 22
@@ -284,6 +307,7 @@ Partial Class Form1
         '
         Me.Dice2.BackColor = System.Drawing.Color.Transparent
         Me.Dice2.Location = New System.Drawing.Point(1008, 317)
+        Me.Dice2.Margin = New System.Windows.Forms.Padding(4)
         Me.Dice2.Name = "Dice2"
         Me.Dice2.Size = New System.Drawing.Size(200, 200)
         Me.Dice2.TabIndex = 23
@@ -292,7 +316,8 @@ Partial Class Form1
         'Dice3
         '
         Me.Dice3.BackColor = System.Drawing.Color.Transparent
-        Me.Dice3.Location = New System.Drawing.Point(699, 523)
+        Me.Dice3.Location = New System.Drawing.Point(700, 523)
+        Me.Dice3.Margin = New System.Windows.Forms.Padding(4)
         Me.Dice3.Name = "Dice3"
         Me.Dice3.Size = New System.Drawing.Size(200, 200)
         Me.Dice3.TabIndex = 24
@@ -301,18 +326,23 @@ Partial Class Form1
         'Dice4
         '
         Me.Dice4.BackColor = System.Drawing.Color.Transparent
-        Me.Dice4.Location = New System.Drawing.Point(905, 523)
+        Me.Dice4.Location = New System.Drawing.Point(904, 523)
+        Me.Dice4.Margin = New System.Windows.Forms.Padding(4)
         Me.Dice4.Name = "Dice4"
         Me.Dice4.Size = New System.Drawing.Size(200, 200)
         Me.Dice4.TabIndex = 25
         Me.Dice4.TabStop = False
         '
-        'Form1
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
+        'Generala
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(1849, 772)
+        Me.ClientSize = New System.Drawing.Size(1832, 771)
         Me.Controls.Add(Me.Dice4)
         Me.Controls.Add(Me.Dice3)
         Me.Controls.Add(Me.Dice2)
@@ -337,7 +367,8 @@ Partial Class Form1
         Me.Controls.Add(Me.BDado1)
         Me.Controls.Add(Me.BDado0)
         Me.Controls.Add(Me.BDado3)
-        Me.Name = "Form1"
+        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Name = "Generala"
         Me.Text = "Form1"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -375,4 +406,5 @@ Partial Class Form1
     Friend WithEvents Dice2 As PictureBox
     Friend WithEvents Dice3 As PictureBox
     Friend WithEvents Dice4 As PictureBox
+    Friend WithEvents Timer1 As Timer
 End Class

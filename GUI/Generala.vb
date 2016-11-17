@@ -1,33 +1,19 @@
 ﻿Imports System.IO
 Imports System.Threading
-Public Class Form1
 
-    Dim Partida As New BE.Partida
+Public Class Generala
+
     Dim Cubilete As New BLL.CUBILETE
     Dim Calculador As New BLL.Calculador
+    Dim PartidaBLL As New BLL.Partida
     Dim Turno As New BLL.Turno(Partida.jugadores)
     Dim mypath As String = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\dice_states\\"))
-    'Dim myAnimationPath As String = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\dice_states\\"))
     Dim actualPictureBox As PictureBox
     Dim botonesTiro As New List(Of Button)
-
+    Dim counter As Integer = 0
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        DataGridView1.DefaultCellStyle.BackColor = Color.White
-        DataGridView1.DefaultCellStyle.SelectionBackColor = Color.White
-        DataGridView1.DefaultCellStyle.SelectionForeColor = Color.Black
-        DataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        DataGridView2.DefaultCellStyle.BackColor = Color.White
-        DataGridView2.DefaultCellStyle.SelectionBackColor = Color.White
-        DataGridView2.DefaultCellStyle.SelectionForeColor = Color.Black
-        Label1.Text = Partida.jugadores(0).user
-        Label2.Text = Partida.jugadores(1).user
-        Calculador.asignarCategorias(Partida.jugadores(0))
-        Calculador.asignarCategorias(Partida.jugadores(1))
-        Cubilete.llenar(Partida.dados)
-        botonesTiro.AddRange({btnTirar, btnDoble, btnEscalera, btnFull, btnGenerala, btnPoker})
-        Actualizar()
+        Load_Game()
     End Sub
 
 
@@ -42,6 +28,9 @@ Public Class Form1
     End Sub
 
     Private Sub Actualizar()
+        Label1.Text = Partida.jugadores(0).user
+        Label2.Text = Partida.jugadores(1).user
+
         BDado0.Text = Partida.dados(0).numero
         BDado1.Text = Partida.dados(1).numero
         BDado2.Text = Partida.dados(2).numero
@@ -61,6 +50,7 @@ Public Class Form1
         Label5.Text = Partida.jugadores(0).puntaje
         Label6.Text = Partida.jugadores(1).puntaje
         ActualizarGrids()
+
     End Sub
 
     Private Sub ActualizarGrids()
@@ -134,11 +124,8 @@ Public Class Form1
     End Sub
 
     Public Sub prepararSiguienteJugada()
-        Actualizar()
         Cubilete.llenar(Partida.dados)
         Calculador.borrarCalculos(Turno)
-        ActualizarGrids()
-        Turno.proximoJugador(Partida)
         BDado0.Visible = False
         BDado1.Visible = False
         BDado2.Visible = False
@@ -151,6 +138,10 @@ Public Class Form1
         Dice4.Visible = False
         Cubilete.llenar(Partida.dados)
         HabilitarBotones()
+        Actualizar()
+        Turno.proximoJugador(Partida)
+        EvaluarFinalPartida
+
     End Sub
 
     Public Sub mostrar()
@@ -194,7 +185,6 @@ Public Class Form1
             If MsgBox(msgBoxText, MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
                 categoria.asignado = True
                 prepararSiguienteJugada()
-                ActualizarGrids()
             End If
         End If
     End Sub
@@ -325,6 +315,40 @@ Public Class Form1
     Private Sub Dice4_Click(sender As Object, e As EventArgs) Handles Dice4.Click
         Cubilete.enviar(Partida.dados(4))
         Dice4.ImageLocation = UpdateImagenDado(Partida.dados(4))
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        counter = counter + 1
+    End Sub
+
+    Private Sub Load_Game()
+        counter = 0
+        Timer1.Start()
+        DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        DataGridView1.DefaultCellStyle.BackColor = Color.White
+        DataGridView1.DefaultCellStyle.SelectionBackColor = Color.White
+        DataGridView1.DefaultCellStyle.SelectionForeColor = Color.Black
+        DataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        DataGridView2.DefaultCellStyle.BackColor = Color.White
+        DataGridView2.DefaultCellStyle.SelectionBackColor = Color.White
+        DataGridView2.DefaultCellStyle.SelectionForeColor = Color.Black
+        Label1.Text = Partida.jugadores(0).user
+        Label2.Text = Partida.jugadores(1).user
+        Calculador.asignarCategorias(Partida.jugadores(0))
+        Calculador.asignarCategorias(Partida.jugadores(1))
+        Cubilete.llenar(Partida.dados)
+        botonesTiro.AddRange({btnTirar, btnDoble, btnEscalera, btnFull, btnGenerala, btnPoker})
+        Actualizar()
+    End Sub
+
+    Public Sub EvaluarFinalPartida()
+        If Partida.empezada = False Then
+            Partida.tiempo = counter
+            MsgBox("La partida duró " + (Partida.tiempo / 60).ToString + " minutos")
+            PartidaBLL.Insertar(Partida)
+            Login.Show()
+            Me.Close()
+        End If
     End Sub
 
 End Class

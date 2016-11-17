@@ -8,6 +8,7 @@
         dados.Add(New Dado)
         jugadores.Add(New Jugador("Jugador1"))
         jugadores.Add(New Jugador("Jugador2"))
+        empezada = True
     End Sub
 
     Private _jugadores As New List(Of Jugador)
@@ -17,6 +18,16 @@
         End Get
         Set(ByVal value As List(Of Jugador))
             _jugadores = value
+        End Set
+    End Property
+
+    Private _id As Integer
+    Public Property id() As Integer
+        Get
+            Return _id
+        End Get
+        Set(ByVal value As Integer)
+            _id = value
         End Set
     End Property
 
@@ -49,4 +60,35 @@
             _dados = value
         End Set
     End Property
+
+    Private _empezada As Boolean
+    Public Property empezada() As Boolean
+        Get
+            Return _empezada
+        End Get
+        Set(ByVal value As Boolean)
+            _empezada = value
+        End Set
+    End Property
+
+    Private _tiempo As Integer
+    Public Property tiempo() As Integer
+        Get
+            Return _tiempo
+        End Get
+        Set(ByVal value As Integer)
+            _tiempo = value
+        End Set
+    End Property
+
+    Private _empate As Boolean
+    Public Property empate() As Boolean
+        Get
+            Return _empate
+        End Get
+        Set(ByVal value As Boolean)
+            _empate = value
+        End Set
+    End Property
+
 End Class

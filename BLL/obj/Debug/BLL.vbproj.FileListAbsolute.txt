@@ -10,3 +10,6 @@ C:\Users\Cristian\Desktop\generala\Generala\BLL\obj\Debug\BLL.vbproj.GenerateRes
 C:\Users\Cristian\Desktop\generala\Generala\BLL\obj\Debug\BLL.dll
 C:\Users\Cristian\Desktop\generala\Generala\BLL\obj\Debug\BLL.xml
 C:\Users\Cristian\Desktop\generala\Generala\BLL\obj\Debug\BLL.pdb
+C:\Users\Cristian\Desktop\generala\Generala\BLL\bin\Debug\DAL.dll
+C:\Users\Cristian\Desktop\generala\Generala\BLL\bin\Debug\DAL.pdb
+C:\Users\Cristian\Desktop\generala\Generala\BLL\bin\Debug\DAL.xml

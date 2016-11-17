@@ -6,7 +6,6 @@ C:\Users\Cristian\Desktop\generala\Generala\GUI\bin\Debug\BE.dll
 C:\Users\Cristian\Desktop\generala\Generala\GUI\bin\Debug\BE.pdb
 C:\Users\Cristian\Desktop\generala\Generala\GUI\bin\Debug\BE.xml
 C:\Users\Cristian\Desktop\generala\Generala\GUI\obj\Debug\GUI.vbprojResolveAssemblyReference.cache
-C:\Users\Cristian\Desktop\generala\Generala\GUI\obj\Debug\GUI.Form1.resources
 C:\Users\Cristian\Desktop\generala\Generala\GUI\obj\Debug\GUI.Resources.resources
 C:\Users\Cristian\Desktop\generala\Generala\GUI\obj\Debug\GUI.vbproj.GenerateResource.Cache
 C:\Users\Cristian\Desktop\generala\Generala\GUI\obj\Debug\GUI.exe
@@ -15,3 +14,8 @@ C:\Users\Cristian\Desktop\generala\Generala\GUI\obj\Debug\GUI.pdb
 C:\Users\Cristian\Desktop\generala\Generala\GUI\bin\Debug\BLL.dll
 C:\Users\Cristian\Desktop\generala\Generala\GUI\bin\Debug\BLL.pdb
 C:\Users\Cristian\Desktop\generala\Generala\GUI\bin\Debug\BLL.xml
+C:\Users\Cristian\Desktop\generala\Generala\GUI\obj\Debug\GUI.Login.resources
+C:\Users\Cristian\Desktop\generala\Generala\GUI\bin\Debug\DAL.dll
+C:\Users\Cristian\Desktop\generala\Generala\GUI\bin\Debug\DAL.pdb
+C:\Users\Cristian\Desktop\generala\Generala\GUI\bin\Debug\DAL.xml
+C:\Users\Cristian\Desktop\generala\Generala\GUI\obj\Debug\GUI.Generala.resources

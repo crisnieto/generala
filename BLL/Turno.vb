@@ -19,6 +19,7 @@
 
     Public Function proximoJugador(partida As BE.Partida) As BE.Jugador
         If checkFinJuego(partida) Then
+            partida.empezada = False
             Return turno.jugadorActual
         Else
 
@@ -64,18 +65,24 @@
 
         If finJuego = True Then
             MsgBox("TERMINO EL JUEGO")
-            Dim empate As Integer
-            Dim puntaje As Integer = jugadores(0).puntaje
-            partida.ganador = jugadores(0)
-            For Each jugador In partida.jugadores
-                If jugador.puntaje > puntaje Then
-                    puntaje = jugador.puntaje
-                    partida.ganador = jugador
-                ElseIf jugador.puntaje = puntaje Then
-                    empate += 1
-                End If
-            Next
-            If empate = jugadores.Count Then
+            Dim empate As Boolean
+            If jugadores(0).puntaje > jugadores(1).puntaje Then
+                partida.ganador = jugadores(0)
+                jugadores(0).resultado = "G"
+                jugadores(1).resultado = "P"
+
+            ElseIf jugadores(0).puntaje < jugadores(1).puntaje Then
+                partida.ganador = jugadores(1)
+                jugadores(1).resultado = "G"
+                jugadores(0).resultado = "P"
+
+            ElseIf jugadores(0).puntaje = jugadores(1).puntaje Then
+                jugadores(1).resultado = "E"
+                jugadores(0).resultado = "E"
+            End If
+
+            If empate Then
+                partida.ganador = Nothing
                 MsgBox("EL JUEGO TERMINA EMPATADO")
             Else
                 MsgBox("EL GANADOR FUE " & partida.ganador.user)

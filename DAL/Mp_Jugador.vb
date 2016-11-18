@@ -27,5 +27,11 @@ Public Class Mp_Jugador
         Return ac.DevolverEscalar("VerificarExistenciaJugador", params)
     End Function
 
+    Public Function ControlLogin(unJugador As BE.Jugador) As Integer
+        Dim params(1) As SqlParameter
+        params(0) = New SqlParameter("@user_name", unJugador.user)
+        params(1) = New SqlParameter("@password", unJugador.password)
+        Return ac.DevolverEscalar("ControlLogin", params)
+    End Function
 
 End Class

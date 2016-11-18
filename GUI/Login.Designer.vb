@@ -54,10 +54,12 @@ Partial Class Login
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(24, 35)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.125!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(18, 28)
         Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(57, 25)
+        Me.Label1.Size = New System.Drawing.Size(76, 31)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "User"
         '
@@ -67,10 +69,12 @@ Partial Class Login
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(24, 138)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.125!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(18, 132)
         Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(106, 25)
+        Me.Label2.Size = New System.Drawing.Size(142, 31)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Password"
         '
@@ -86,10 +90,12 @@ Partial Class Login
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.CausesValidation = False
-        Me.CheckBox1.Location = New System.Drawing.Point(30, 242)
+        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.875!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.ForeColor = System.Drawing.Color.White
+        Me.CheckBox1.Location = New System.Drawing.Point(24, 231)
         Me.CheckBox1.Margin = New System.Windows.Forms.Padding(6)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(492, 29)
+        Me.CheckBox1.Size = New System.Drawing.Size(537, 29)
         Me.CheckBox1.TabIndex = 4
         Me.CheckBox1.Text = "¿Nuevo? ¡Registrate con los datos ingresados!"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -108,10 +114,12 @@ Partial Class Login
         '
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.CausesValidation = False
-        Me.CheckBox2.Location = New System.Drawing.Point(760, 242)
+        Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.875!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox2.ForeColor = System.Drawing.Color.White
+        Me.CheckBox2.Location = New System.Drawing.Point(730, 231)
         Me.CheckBox2.Margin = New System.Windows.Forms.Padding(6)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(492, 29)
+        Me.CheckBox2.Size = New System.Drawing.Size(537, 29)
         Me.CheckBox2.TabIndex = 10
         Me.CheckBox2.Text = "¿Nuevo? ¡Registrate con los datos ingresados!"
         Me.CheckBox2.UseVisualStyleBackColor = True
@@ -119,16 +127,18 @@ Partial Class Login
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(754, 138)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.125!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(724, 132)
         Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(106, 25)
+        Me.Label3.Size = New System.Drawing.Size(142, 31)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Password"
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(754, 169)
+        Me.TextBox3.Location = New System.Drawing.Point(730, 169)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(6)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(490, 31)
@@ -137,16 +147,18 @@ Partial Class Login
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(754, 35)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.125!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(724, 28)
         Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(57, 25)
+        Me.Label4.Size = New System.Drawing.Size(76, 31)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "User"
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(754, 65)
+        Me.TextBox4.Location = New System.Drawing.Point(730, 65)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(6)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(490, 31)
@@ -154,7 +166,7 @@ Partial Class Login
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(922, 287)
+        Me.Button2.Location = New System.Drawing.Point(907, 287)
         Me.Button2.Margin = New System.Windows.Forms.Padding(6)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(168, 44)
@@ -186,6 +198,7 @@ Partial Class Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.RoyalBlue
         Me.ClientSize = New System.Drawing.Size(1272, 663)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)

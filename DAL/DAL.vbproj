@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acceso.vb" />
+    <Compile Include="Mp_Estadisticas.vb" />
     <Compile Include="Mp_Jugador.vb" />
     <Compile Include="Mp_Partida.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

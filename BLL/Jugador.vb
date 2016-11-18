@@ -17,6 +17,8 @@
         Return gestorDal.VerificarExistencia(unJugador)
     End Function
 
-
+    Public Function ControlLogin(unJugador As BE.Jugador) As Integer
+        Return gestorDal.ControlLogin(unJugador)
+    End Function
 
 End Class

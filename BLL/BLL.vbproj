@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Calculador.vb" />
     <Compile Include="Cubilete.vb" />
+    <Compile Include="Estadisticas.vb" />
     <Compile Include="Jugador.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

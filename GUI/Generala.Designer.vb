@@ -24,11 +24,6 @@ Partial Class Generala
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Generala))
-        Me.BDado3 = New System.Windows.Forms.Button()
-        Me.BDado0 = New System.Windows.Forms.Button()
-        Me.BDado1 = New System.Windows.Forms.Button()
-        Me.BDado2 = New System.Windows.Forms.Button()
-        Me.BDado4 = New System.Windows.Forms.Button()
         Me.btnTirar = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
@@ -49,6 +44,7 @@ Partial Class Generala
         Me.Dice3 = New System.Windows.Forms.PictureBox()
         Me.Dice4 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Dice0, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,69 +54,9 @@ Partial Class Generala
         CType(Me.Dice4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'BDado3
-        '
-        Me.BDado3.Enabled = False
-        Me.BDado3.Location = New System.Drawing.Point(942, 198)
-        Me.BDado3.Margin = New System.Windows.Forms.Padding(4)
-        Me.BDado3.Name = "BDado3"
-        Me.BDado3.Size = New System.Drawing.Size(96, 85)
-        Me.BDado3.TabIndex = 0
-        Me.BDado3.Text = "1"
-        Me.BDado3.UseVisualStyleBackColor = True
-        Me.BDado3.Visible = False
-        '
-        'BDado0
-        '
-        Me.BDado0.Enabled = False
-        Me.BDado0.Location = New System.Drawing.Point(636, 198)
-        Me.BDado0.Margin = New System.Windows.Forms.Padding(4)
-        Me.BDado0.Name = "BDado0"
-        Me.BDado0.Size = New System.Drawing.Size(96, 85)
-        Me.BDado0.TabIndex = 1
-        Me.BDado0.Text = "1"
-        Me.BDado0.UseVisualStyleBackColor = True
-        Me.BDado0.Visible = False
-        '
-        'BDado1
-        '
-        Me.BDado1.Enabled = False
-        Me.BDado1.Location = New System.Drawing.Point(738, 198)
-        Me.BDado1.Margin = New System.Windows.Forms.Padding(4)
-        Me.BDado1.Name = "BDado1"
-        Me.BDado1.Size = New System.Drawing.Size(96, 85)
-        Me.BDado1.TabIndex = 2
-        Me.BDado1.Text = "2"
-        Me.BDado1.UseVisualStyleBackColor = True
-        Me.BDado1.Visible = False
-        '
-        'BDado2
-        '
-        Me.BDado2.Enabled = False
-        Me.BDado2.Location = New System.Drawing.Point(840, 198)
-        Me.BDado2.Margin = New System.Windows.Forms.Padding(4)
-        Me.BDado2.Name = "BDado2"
-        Me.BDado2.Size = New System.Drawing.Size(96, 85)
-        Me.BDado2.TabIndex = 3
-        Me.BDado2.Text = "3"
-        Me.BDado2.UseVisualStyleBackColor = True
-        Me.BDado2.Visible = False
-        '
-        'BDado4
-        '
-        Me.BDado4.Enabled = False
-        Me.BDado4.Location = New System.Drawing.Point(1044, 198)
-        Me.BDado4.Margin = New System.Windows.Forms.Padding(4)
-        Me.BDado4.Name = "BDado4"
-        Me.BDado4.Size = New System.Drawing.Size(96, 85)
-        Me.BDado4.TabIndex = 4
-        Me.BDado4.Text = "4"
-        Me.BDado4.UseVisualStyleBackColor = True
-        Me.BDado4.Visible = False
-        '
         'btnTirar
         '
-        Me.btnTirar.Location = New System.Drawing.Point(738, 92)
+        Me.btnTirar.Location = New System.Drawing.Point(741, 144)
         Me.btnTirar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTirar.Name = "btnTirar"
         Me.btnTirar.Size = New System.Drawing.Size(300, 85)
@@ -182,7 +118,7 @@ Partial Class Generala
         '
         'btnEscalera
         '
-        Me.btnEscalera.Location = New System.Drawing.Point(698, 12)
+        Me.btnEscalera.Location = New System.Drawing.Point(698, 85)
         Me.btnEscalera.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEscalera.Name = "btnEscalera"
         Me.btnEscalera.Size = New System.Drawing.Size(124, 48)
@@ -192,7 +128,7 @@ Partial Class Generala
         '
         'btnFull
         '
-        Me.btnFull.Location = New System.Drawing.Point(828, 12)
+        Me.btnFull.Location = New System.Drawing.Point(828, 85)
         Me.btnFull.Margin = New System.Windows.Forms.Padding(4)
         Me.btnFull.Name = "btnFull"
         Me.btnFull.Size = New System.Drawing.Size(124, 48)
@@ -202,7 +138,7 @@ Partial Class Generala
         '
         'btnPoker
         '
-        Me.btnPoker.Location = New System.Drawing.Point(956, 12)
+        Me.btnPoker.Location = New System.Drawing.Point(956, 85)
         Me.btnPoker.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPoker.Name = "btnPoker"
         Me.btnPoker.Size = New System.Drawing.Size(124, 48)
@@ -212,7 +148,7 @@ Partial Class Generala
         '
         'btnGenerala
         '
-        Me.btnGenerala.Location = New System.Drawing.Point(1084, 12)
+        Me.btnGenerala.Location = New System.Drawing.Point(1084, 85)
         Me.btnGenerala.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGenerala.Name = "btnGenerala"
         Me.btnGenerala.Size = New System.Drawing.Size(124, 48)
@@ -222,7 +158,7 @@ Partial Class Generala
         '
         'btnDoble
         '
-        Me.btnDoble.Location = New System.Drawing.Point(564, 12)
+        Me.btnDoble.Location = New System.Drawing.Point(564, 85)
         Me.btnDoble.Margin = New System.Windows.Forms.Padding(4)
         Me.btnDoble.Name = "btnDoble"
         Me.btnDoble.Size = New System.Drawing.Size(124, 48)
@@ -337,12 +273,26 @@ Partial Class Generala
         '
         Me.Timer1.Interval = 1000
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Segoe Print", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(731, 9)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(132, 57)
+        Me.Label7.TabIndex = 26
+        Me.Label7.Text = "Label7"
+        '
         'Generala
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1832, 771)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Dice4)
         Me.Controls.Add(Me.Dice3)
         Me.Controls.Add(Me.Dice2)
@@ -362,11 +312,6 @@ Partial Class Generala
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnTirar)
-        Me.Controls.Add(Me.BDado4)
-        Me.Controls.Add(Me.BDado2)
-        Me.Controls.Add(Me.BDado1)
-        Me.Controls.Add(Me.BDado0)
-        Me.Controls.Add(Me.BDado3)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Generala"
         Me.Text = "Form1"
@@ -381,12 +326,6 @@ Partial Class Generala
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents BDado3 As Button
-    Friend WithEvents BDado0 As Button
-    Friend WithEvents BDado1 As Button
-    Friend WithEvents BDado2 As Button
-    Friend WithEvents BDado4 As Button
     Friend WithEvents btnTirar As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents DataGridView2 As DataGridView
@@ -407,4 +346,5 @@ Partial Class Generala
     Friend WithEvents Dice3 As PictureBox
     Friend WithEvents Dice4 As PictureBox
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Label7 As Label
 End Class

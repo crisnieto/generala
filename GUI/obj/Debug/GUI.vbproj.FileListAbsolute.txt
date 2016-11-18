@@ -19,3 +19,4 @@ C:\Users\Cristian\Desktop\generala\Generala\GUI\bin\Debug\DAL.dll
 C:\Users\Cristian\Desktop\generala\Generala\GUI\bin\Debug\DAL.pdb
 C:\Users\Cristian\Desktop\generala\Generala\GUI\bin\Debug\DAL.xml
 C:\Users\Cristian\Desktop\generala\Generala\GUI\obj\Debug\GUI.Generala.resources
+C:\Users\Cristian\Desktop\generala\Generala\GUI\obj\Debug\GUI.Estadisticas.resources

@@ -30,12 +30,6 @@ Public Class Generala
     Private Sub Actualizar()
         Label1.Text = Partida.jugadores(0).user
         Label2.Text = Partida.jugadores(1).user
-
-        BDado0.Text = Partida.dados(0).numero
-        BDado1.Text = Partida.dados(1).numero
-        BDado2.Text = Partida.dados(2).numero
-        BDado3.Text = Partida.dados(3).numero
-        BDado4.Text = Partida.dados(4).numero
         Dice0.ImageLocation = CargarImagenDado(Partida.dados(0))
         Dice1.ImageLocation = CargarImagenDado(Partida.dados(1))
         Dice2.ImageLocation = CargarImagenDado(Partida.dados(2))
@@ -50,7 +44,6 @@ Public Class Generala
         Label5.Text = Partida.jugadores(0).puntaje
         Label6.Text = Partida.jugadores(1).puntaje
         ActualizarGrids()
-
     End Sub
 
     Private Sub ActualizarGrids()
@@ -99,23 +92,23 @@ Public Class Generala
         Next
     End Sub
 
-    Private Sub BDado0_Click(sender As Object, e As EventArgs) Handles BDado0.Click
+    Private Sub BDado0_Click(sender As Object, e As EventArgs)
         Cubilete.enviar(Partida.dados(0))
     End Sub
 
-    Private Sub BDado1_Click(sender As Object, e As EventArgs) Handles BDado1.Click
+    Private Sub BDado1_Click(sender As Object, e As EventArgs)
         Cubilete.enviar(Partida.dados(1))
     End Sub
 
-    Private Sub BDado2_Click(sender As Object, e As EventArgs) Handles BDado2.Click
+    Private Sub BDado2_Click(sender As Object, e As EventArgs)
         Cubilete.enviar(Partida.dados(2))
     End Sub
 
-    Private Sub BDado3_Click(sender As Object, e As EventArgs) Handles BDado3.Click
+    Private Sub BDado3_Click(sender As Object, e As EventArgs)
         Cubilete.enviar(Partida.dados(3))
     End Sub
 
-    Private Sub BDado4_Click(sender As Object, e As EventArgs) Handles BDado4.Click
+    Private Sub BDado4_Click(sender As Object, e As EventArgs)
         Cubilete.enviar(Partida.dados(4))
     End Sub
 
@@ -126,11 +119,6 @@ Public Class Generala
     Public Sub prepararSiguienteJugada()
         Cubilete.llenar(Partida.dados)
         Calculador.borrarCalculos(Turno)
-        BDado0.Visible = False
-        BDado1.Visible = False
-        BDado2.Visible = False
-        BDado3.Visible = False
-        BDado4.Visible = False
         Dice0.Visible = False
         Dice1.Visible = False
         Dice2.Visible = False
@@ -140,16 +128,12 @@ Public Class Generala
         HabilitarBotones()
         Actualizar()
         Turno.proximoJugador(Partida)
-        EvaluarFinalPartida
+        Label7.Text = "Es el turno de: " + Turno.conseguirJugadorActual.user
+        EvaluarFinalPartida()
 
     End Sub
 
     Public Sub mostrar()
-        BDado0.Visible = True
-        BDado1.Visible = True
-        BDado2.Visible = True
-        BDado3.Visible = True
-        BDado4.Visible = True
         Dice0.Visible = True
         Dice1.Visible = True
         Dice2.Visible = True
@@ -339,6 +323,7 @@ Public Class Generala
         Cubilete.llenar(Partida.dados)
         botonesTiro.AddRange({btnTirar, btnDoble, btnEscalera, btnFull, btnGenerala, btnPoker})
         Actualizar()
+        Label7.Text = "Es el turno de: " + Turno.conseguirJugadorActual.user
     End Sub
 
     Public Sub EvaluarFinalPartida()

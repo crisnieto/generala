@@ -38,28 +38,31 @@ Partial Class Estadisticas
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.875!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(12, 22)
+        Me.Label1.Location = New System.Drawing.Point(6, 11)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(619, 42)
+        Me.Label1.Size = New System.Drawing.Size(331, 24)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Promedio de victorias por Jugador"
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(17, 67)
+        Me.DataGridView1.Location = New System.Drawing.Point(8, 35)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 33
-        Me.DataGridView1.Size = New System.Drawing.Size(815, 321)
+        Me.DataGridView1.Size = New System.Drawing.Size(408, 167)
         Me.DataGridView1.TabIndex = 1
         '
         'DataGridView2
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(17, 439)
+        Me.DataGridView2.Location = New System.Drawing.Point(8, 228)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowTemplate.Height = 33
-        Me.DataGridView2.Size = New System.Drawing.Size(815, 326)
+        Me.DataGridView2.Size = New System.Drawing.Size(408, 170)
         Me.DataGridView2.TabIndex = 3
         '
         'Label2
@@ -67,19 +70,21 @@ Partial Class Estadisticas
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.875!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(12, 394)
+        Me.Label2.Location = New System.Drawing.Point(6, 205)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(761, 42)
+        Me.Label2.Size = New System.Drawing.Size(402, 24)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Victorias, Derrotas y Empates por Jugador"
         '
         'DataGridView3
         '
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Location = New System.Drawing.Point(17, 817)
+        Me.DataGridView3.Location = New System.Drawing.Point(8, 425)
+        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.RowTemplate.Height = 33
-        Me.DataGridView3.Size = New System.Drawing.Size(815, 326)
+        Me.DataGridView3.Size = New System.Drawing.Size(408, 170)
         Me.DataGridView3.TabIndex = 5
         '
         'Label3
@@ -87,24 +92,26 @@ Partial Class Estadisticas
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.875!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(12, 772)
+        Me.Label3.Location = New System.Drawing.Point(6, 401)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(573, 42)
+        Me.Label3.Size = New System.Drawing.Size(309, 24)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Tiempo acumulado por Jugador"
         '
         'Estadisticas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkRed
-        Me.ClientSize = New System.Drawing.Size(862, 1178)
+        Me.ClientSize = New System.Drawing.Size(425, 602)
         Me.Controls.Add(Me.DataGridView3)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Estadisticas"
         Me.Text = "Estadisticas"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

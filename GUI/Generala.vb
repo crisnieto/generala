@@ -39,7 +39,9 @@ Public Class Generala
 
 
         Calculador.borrarCalculos(Turno)
-        Calculador.calcularPosibilidades(Partida.dados, Turno)
+        If Turno.numeroTiro > 0 Then
+            Calculador.calcularPosibilidades(Partida.dados, Turno)
+        End If
         Calculador.calcularPuntajes(Partida)
         Label5.Text = Partida.jugadores(0).puntaje
         Label6.Text = Partida.jugadores(1).puntaje
@@ -55,7 +57,7 @@ Public Class Generala
             Dim categoria As BE.Categoria = row.DataBoundItem
             row.DefaultCellStyle.SelectionBackColor = row.DefaultCellStyle.BackColor
             row.DefaultCellStyle.SelectionForeColor = row.DefaultCellStyle.ForeColor
-            If categoria.puntos <> 0 And categoria.asignado = False Then
+            If categoria.puntos <> 0 And categoria.asignado = False And Turno.conseguirJugadorActual.Equals(Partida.jugadores(0)) Then
                 row.DefaultCellStyle.BackColor = Color.LightBlue
                 row.DefaultCellStyle.SelectionBackColor = row.DefaultCellStyle.BackColor
                 row.DefaultCellStyle.SelectionForeColor = row.DefaultCellStyle.ForeColor
@@ -66,8 +68,6 @@ Public Class Generala
                     row.DefaultCellStyle.SelectionForeColor = row.DefaultCellStyle.ForeColor
                 End If
             End If
-
-
         Next
 
         DataGridView2.DataSource = Nothing
@@ -78,7 +78,7 @@ Public Class Generala
             Dim categoria As BE.Categoria = row.DataBoundItem
             row.DefaultCellStyle.SelectionBackColor = row.DefaultCellStyle.BackColor
             row.DefaultCellStyle.SelectionForeColor = row.DefaultCellStyle.ForeColor
-            If categoria.puntos <> 0 And categoria.asignado = False Then
+            If categoria.puntos <> 0 And categoria.asignado = False And Turno.conseguirJugadorActual.Equals(Partida.jugadores(1)) Then
                 row.DefaultCellStyle.BackColor = Color.LightBlue
                 row.DefaultCellStyle.SelectionBackColor = row.DefaultCellStyle.BackColor
                 row.DefaultCellStyle.SelectionForeColor = row.DefaultCellStyle.ForeColor
@@ -91,6 +91,14 @@ Public Class Generala
             End If
         Next
     End Sub
+
+
+    Public Function cleanDataGrids()
+        DataGridView1.DataSource = Nothing
+        DataGridView1.DataSource = Partida.jugadores(1).categorias
+        DataGridView2.DataSource = Nothing
+        DataGridView2.DataSource = Partida.jugadores(1).categorias
+    End Function
 
     Private Sub BDado0_Click(sender As Object, e As EventArgs)
         Cubilete.enviar(Partida.dados(0))
@@ -129,8 +137,8 @@ Public Class Generala
         Actualizar()
         Turno.proximoJugador(Partida)
         Label7.Text = "Es el turno de: " + Turno.conseguirJugadorActual.user
+        ActualizarGrids()
         EvaluarFinalPartida()
-
     End Sub
 
     Public Sub mostrar()
@@ -168,6 +176,7 @@ Public Class Generala
         If categoria.asignado = False And Turno.numeroTiro >= 1 And Turno.conseguirJugadorActual.Equals(jugador) Then
             If MsgBox(msgBoxText, MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
                 categoria.asignado = True
+                Turno.anotar()
                 prepararSiguienteJugada()
             End If
         End If

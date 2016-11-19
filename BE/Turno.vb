@@ -29,4 +29,14 @@
         End Set
     End Property
 
+    Private _anotado As Boolean
+    Public Property anotado() As Boolean
+        Get
+            Return _anotado
+        End Get
+        Set(ByVal value As Boolean)
+            _anotado = value
+        End Set
+    End Property
+
 End Class

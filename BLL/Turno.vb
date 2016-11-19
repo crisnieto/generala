@@ -18,6 +18,7 @@
     End Function
 
     Public Function proximoJugador(partida As BE.Partida) As BE.Jugador
+        turno.anotado = False
         If checkFinJuego(partida) Then
             partida.empezada = False
             Return turno.jugadorActual
@@ -90,6 +91,14 @@
         End If
 
         Return finJuego
+    End Function
+
+    Public Sub anotar()
+        turno.anotado = True
+    End Sub
+
+    Public Function anotado() As Boolean
+        Return turno.anotado
     End Function
 
 End Class

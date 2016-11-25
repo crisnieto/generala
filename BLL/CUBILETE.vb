@@ -3,6 +3,7 @@
 
     Public Sub llenar(dados As List(Of BE.Dado))
         For Each dado As BE.Dado In dados
+            dado.numero = 0
             cubilete.dados.Add(dado)
         Next
     End Sub

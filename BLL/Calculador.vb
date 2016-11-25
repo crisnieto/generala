@@ -69,7 +69,7 @@
         Dim cGenerala As BE.Categoria = buscarCategoria("Generala", categorias)
 
         Dim cGeneralaDoble As BE.Categoria = buscarCategoria("Generala Doble", categorias)
-        If cGeneralaDoble.asignado = False And turno.numeroTiro > 1 And cGenerala.asignado = True And turno.anotado = False Then
+        If cGeneralaDoble.asignado = False And cGenerala.asignado = True And turno.anotado = False Then
             cGeneralaDoble.puntos = calcularGenerala(dados, turno) * 2
         End If
 
